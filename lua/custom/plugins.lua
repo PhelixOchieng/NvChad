@@ -20,7 +20,7 @@ local plugins = {
         "html", "css", "scss", "javascript", "typescript", "vue", "json",
  
         -- low-level
-        "rust"
+        "rust", "python",
       }
     }
   },
@@ -34,6 +34,8 @@ local plugins = {
         "typescript-language-server",
 				"eslint_d",
 				"prettierd",
+				"pyright",
+				"lua-language-server",
       }
     }
   },

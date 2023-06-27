@@ -8,7 +8,9 @@ local servers = {
     filetypes = { 'vue', 'typescriptreact', 'typescript', 'javascript', 'javascriptreact', 'json'}
   },
   tailwindcss = {},
+	pyright = {},
   clangd = {},
+	csharp_ls = {},
 }
 
 -- Folding setup

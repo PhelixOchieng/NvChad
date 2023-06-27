@@ -7,6 +7,7 @@ local sources = {
 	formatting.prettierd.with({
 		prefer_local = "node_modules/.bin",
 	}),
+	formatting.csharpier,
 
 	linting.eslint_d
 }
