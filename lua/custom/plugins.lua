@@ -24,7 +24,7 @@ local plugins = {
     "williamboman/mason.nvim",
     opts = {
       ensure_installed = {
-        -- "rust-analyzer",
+				"pyright"
         -- "vue-language-server",
         -- "tailwindcss-language-server",
         -- "typescript-language-server",

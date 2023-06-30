@@ -17,10 +17,19 @@ local options = {
 	foldenable = true,
 	-- foldmethod = "expr",
 	-- foldexpr = "nvim_treesitter#foldexpr()",
+	--
+	
+	shell = 'powershell',
+	shellcmdflag = "-NoLogo -ExecutionPolicy RemoteSigned",
+	shellredir = '2>&1 | %%{ "$_" } | Out-File %s; exit $LastExitCode',
+	shellpipe  = '2>&1 | %%{ "$_" } | Tee-Object %s; exit $LastExitCode',
+	shellquote = "",
+	shellxquote = "",
 }
 
 for key, value in pairs(options) do
   vim.opt[key] = value
 end
+
 
 
