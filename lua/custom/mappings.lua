@@ -9,6 +9,9 @@ local opts = { noremap = true, silent = true }
 --   term_mode = "t",
 --   command_mode = "c",
 
+local esc = vim.api.nvim_replace_termcodes(
+  '<ESC>', true, false, true
+)
 M.comment = {
   n = {
     ["<C-_>"] = {
@@ -22,7 +25,7 @@ M.comment = {
   v = {
     ["<C-_>"] = {
       "<ESC><cmd>lua require('Comment.api').toggle.linewise(vim.fn.visualmode())<CR>",
-      "Toggle comment",
+      "Toggle block comment",
     },
   },
 }

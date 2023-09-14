@@ -8,6 +8,7 @@ local sources = {
 		prefer_local = "node_modules/.bin",
 	}),
 	formatting.csharpier,
+	formatting.clang_format,
 
 	linting.eslint_d
 }

@@ -35,6 +35,7 @@ local plugins = {
 				"eslint_d",
 				"prettierd",
 				"pyright",
+				"gopls",
 				"lua-language-server",
       }
     }
