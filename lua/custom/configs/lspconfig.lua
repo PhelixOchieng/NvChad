@@ -5,7 +5,7 @@ local lspconfig = require "lspconfig"
 
 local util = require 'lspconfig.util'
 local function get_typescript_server_path(root_dir)
-  local global_ts = '/home/anonymous/.nvm/versions/node/v16.20.0/lib/node_modules/typescript/lib/'
+  local global_ts = '/home/anonymous/.nvm/versions/node/v18.19.0/lib/node_modules/typescript/lib/'
   local found_ts = ''
   local function check_dir(path)
     found_ts =  util.path.join(path, 'node_modules', 'typescript', 'lib')
