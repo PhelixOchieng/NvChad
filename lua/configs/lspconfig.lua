@@ -43,3 +43,11 @@ for name, opts in pairs(servers) do
 end
 
 require('ufo').setup()
+
+-- Show diagnostics in insert mode
+vim.lsp.handlers["textDocument/publishDiagnostics"] = vim.lsp.with(
+  vim.lsp.diagnostic.on_publish_diagnostics, {
+    -- delay update diagnostics
+    update_in_insert = true,
+  }
+)
