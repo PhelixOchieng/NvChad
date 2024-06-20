@@ -2,6 +2,7 @@ local options = {
   formatters_by_ft = {
     lua = { "stylua" },
     vue = { "prettier" },
+    python = { 'isort' },
     -- css = { "prettier" },
     -- html = { "prettier" },
   },
