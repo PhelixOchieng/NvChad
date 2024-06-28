@@ -30,7 +30,7 @@ map(
 map("n", "<A-j>", "<Esc>:m .+1<CR>==", { desc = "Move block down" })
 map("n", "<A-k>", "<Esc>:m .-2<CR>==", { desc = "Move block up" })
 map("v", "<A-j>", ":m '> +1<CR>==gv=gv", { desc = "Move line(s) down" })
-map("v", "<A-k>", ":m '> -2<CR>==gv=gv", { desc = "Move line(s) up" })
+map("v", "<A-k>", ":m '< -2<CR>==gv=gv", { desc = "Move line(s) up" })
 
 map({ "n", "i", "v" }, "<C-s>", "<cmd> w <cr>")
 
