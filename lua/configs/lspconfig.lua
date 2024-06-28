@@ -24,6 +24,7 @@ local servers = {
   volar = {
     filetypes = { "typescript", "javascript", "vue", "json" },
   },
+	eslint = {}
 }
 
 -- Folding

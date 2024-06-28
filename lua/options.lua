@@ -9,6 +9,8 @@ local options = {
   relativenumber = true,
   scrolloff = 8,
   sidescrolloff = 8,
+  expandtab = false,          -- do not convert tabs to spaces
+  tabstop = 2,                -- makes tabs 2 spaces
 
   -- Folding
   foldcolumn = "0",
