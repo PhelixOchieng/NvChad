@@ -24,7 +24,8 @@ local servers = {
   volar = {
     filetypes = { "typescript", "javascript", "vue", "json" },
   },
-	eslint = {}
+	eslint = {},
+	rust_analyzer = {}
 }
 
 -- Folding
