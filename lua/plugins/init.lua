@@ -35,6 +35,10 @@ return {
       },
     },
   },
+	{
+		'rcarriga/nvim-dap-ui',
+		dependencies = { 'mfussenegger/nvim-dap', 'nvim-neotest/nvim-nio' }
+	},
   {
     "stevearc/conform.nvim",
     -- event = 'BufWritePre', -- uncomment for format on save

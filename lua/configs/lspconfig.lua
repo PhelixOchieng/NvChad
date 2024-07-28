@@ -14,7 +14,7 @@ local servers = {
       plugins = {
         {
           name = "@vue/typescript-plugin",
-          location = "/home/anonymous/.nvm/versions/node/v18.19.0/lib/node_modules/@vue/typescript-plugin",
+          location = "/home/anonymous/.nvm/versions/node/v20.16.0/lib/node_modules/@vue/typescript-plugin",
           languages = { "typescript", "javascript", "vue" },
         },
       },
