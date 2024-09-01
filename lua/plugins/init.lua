@@ -57,7 +57,7 @@ return {
 
         -- formatters
         "prettier",
-        "eslint",
+        "eslint_d",
         "pyright",
 
         -- defaults
