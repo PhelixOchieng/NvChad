@@ -25,7 +25,8 @@ local servers = {
     filetypes = { "typescript", "javascript", "vue", "json" },
   },
 	eslint = {},
-	rust_analyzer = {}
+	rust_analyzer = {},
+	dartls = {},
 }
 
 -- Folding
