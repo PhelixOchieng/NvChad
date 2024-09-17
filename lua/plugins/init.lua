@@ -27,6 +27,7 @@ return {
         -- other
         "rust",
         "python",
+				"dart",
 
         -- defaults
         "vim",
