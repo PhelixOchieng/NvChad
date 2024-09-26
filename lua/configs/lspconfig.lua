@@ -15,14 +15,14 @@ local servers = {
         {
           name = "@vue/typescript-plugin",
           location = "/home/anonymous/.nvm/versions/node/v20.16.0/lib/node_modules/@vue/typescript-plugin",
-          languages = { "typescript", "javascript", "vue" },
+          languages = { "typescript", "javascript", "typescriptreact", "javascriptreact", "vue" },
         },
       },
     },
-    filetypes = { "typescript", "javascript", "vue" },
+    filetypes = { "typescript", "javascript", "typescriptreact", "javascriptreact", "vue" },
   },
   volar = {
-    filetypes = { "typescript", "javascript", "vue", "json" },
+    filetypes = { "typescript", "typescriptreact", "javascript", "javascriptreact", "vue", "json" },
   },
 	eslint = {},
 	rust_analyzer = {},
