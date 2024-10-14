@@ -8,8 +8,7 @@ local servers = {
   cssls = {},
   html = {},
   tailwindcss = {},
-  pyright = {},
-  tsserver = {
+  ts_ls = {
     init_options = {
       plugins = {
         {
@@ -24,33 +23,55 @@ local servers = {
   volar = {
     filetypes = { "typescript", "typescriptreact", "javascript", "javascriptreact", "vue", "json" },
   },
-	eslint = {},
-	rust_analyzer = {},
-	dartls = {},
+  eslint = {},
+  rust_analyzer = {},
+  dartls = {},
+  pyright = {
+    settings = {
+      pyright = {
+        -- Using Ruff's import organizer
+        disableOrganizeImports = true,
+      },
+      python = {
+        analysis = {
+          -- Ignore all files for analysis to exclusively use Ruff for linting
+          ignore = { "*" },
+        },
+      },
+    },
+  },
+  ruff = {},
 }
 
 -- Folding
 capabilities.textDocument.foldingRange = {
-	dynamicRegistration = false,
-	lineFoldingOnly = true,
+  dynamicRegistration = false,
+  lineFoldingOnly = true,
 }
 
 -- lsps with default config
 for name, opts in pairs(servers) do
   opts.on_init = on_init
-  opts.on_attach = on_attach
   opts.capabilities = capabilities
+
+  if name == "ruff" then
+    opts.on_attach = function(client, bufnr)
+      if client.name == "ruff" then
+        client.server_capabilities.hoverProvider = false
+      end
+    end
+  else
+    opts.on_attach = on_attach
+  end
 
   -- local setup = vim.tbl_deep_extend("force", default_setup, lsp_opts)
   lspconfig[name].setup(opts)
 end
 
-require('ufo').setup()
+require("ufo").setup()
 
 -- Show diagnostics in insert mode
-vim.lsp.handlers["textDocument/publishDiagnostics"] = vim.lsp.with(
-  vim.lsp.diagnostic.on_publish_diagnostics, {
-    -- delay update diagnostics
-    update_in_insert = true,
-  }
-)
+vim.lsp.handlers["textDocument/publishDiagnostics"] = vim.lsp.with(vim.lsp.diagnostic.on_publish_diagnostics, {
+  -- delay update diagnostics
+  update_in_insert = true,
+})

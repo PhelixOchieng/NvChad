@@ -55,6 +55,7 @@ return {
         "typescript-language-server",
         "rust-analyzer",
         "vue-language-server",
+				"ruff",
 
         -- formatters
         "prettier",
